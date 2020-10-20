@@ -1,11 +1,13 @@
-
-<div class="col">
-    <% @cocktails.each do | cocktail | %>
-        <h3>Cocktail name: <%= cocktail.name %></h3>
-        <% if cocktail.alcoholic == true %>
-            <%= render html: tag.p('Render HTML test if boolean = true: Alcoholic')  %>
-        <% else %>
-            <%= render html: tag.p('Render HTML test if boolean = false: Non-Alcoholic') %>
-        <% end %> 
-    <% end %>
+<div class="container">
+    <div class="row">
+        <h2>Cocktail Test Page</h2>
+        <% @cocktails.each do | cocktail | %>
+            <h3>Cocktail name: <%= cocktail.name %></h3>
+            <% if cocktail.alcoholic == true %>
+                <%= render html: tag.p('Render HTML test if boolean = true: Alcoholic')  %>
+            <% else %>
+                <%= render html: tag.p('Render HTML test if boolean = false: Non-Alcoholic') %>
+            <% end %> 
+        <% end %>
+    </div>
 </div>
