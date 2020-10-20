@@ -1,11 +1,11 @@
 
 <div class="col">
     <% @cocktails.each do | cocktail | %>
-        <h3><%= cocktail.name %></h3>
+        <h3>Cocktail name: <%= cocktail.name %></h3>
         <% if cocktail.alcoholic == true %>
-            <%= render html: tag.strong('Alcoholic')  %>
+            <%= render html: tag.p('Render HTML test if boolean = true: Alcoholic')  %>
         <% else %>
-            <%= render html: tag.strong('Non-Alcoholic') %>
+            <%= render html: tag.p('Render HTML test if boolean = false: Non-Alcoholic') %>
         <% end %>
         
     <% end %>
